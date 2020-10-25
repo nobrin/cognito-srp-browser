@@ -1,4 +1,4 @@
-﻿# CognitoでのSRP認証用モジュール
+# CognitoでのSRP認証用モジュール
 ## 概要
 Cognito User PoolでSRP(Secure Remote Password)プロトコルで認証するためのブラウザ用のJavaScriptモジュールです。
 AWS Amplifyを使えば実現できますが、フレームワークを使わずに実現することができます。

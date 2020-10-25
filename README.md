@@ -1,9 +1,9 @@
-﻿# cognito-srp-browser.js -- SRP authentication module for Cognito in the browser
+# SRP authentication module for Cognito in the browser
 
 - JAPANESE document is available: See README_ja.md
 
 ## Synopsis
-A implementation of SRP(Secure Remote Password protocol) for Cognito User Pool running on the browser.  
+A implementation of SRP(Secure Remote Password protocol) for Cognito User Pool.  
 Equivalent function has been implemented by the AWS Amplify. This module makes more simply to use the function.  
 So you can use the module for small applications.
 

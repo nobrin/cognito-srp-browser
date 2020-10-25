@@ -1,14 +1,19 @@
-// cognito-srp-browser.js
-// CognitoSRP for browser
-// Depends browser native BigInt and Crypto.subtle
-// - BigInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
-// - Crypto.subtle: https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle
-
-/* Code example:
-	const USERPOOL_ID = "ap-northeast-1_UPEXAMPLE";
+/*
+ * cognito-srp-browser.js v0.0.1
+ * A JavaScript library for SRP in browser for Amazon Cognito.
+ * https://github.com/nobrin/cognito-srp-browser
+ * Copyright (c) 2020 Nobuo Okazaki
+ * MIT Licensed.
+ *
+ * Depends browser native BigInt and Crypto.subtle
+ * - BigInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
+ * - Crypto.subtle: https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle
+ *
+ * Code example:
+	const USERPOOL_ID = "ap-northeast-1_EXAMPLEXX";
 	const ID_POOL = "ap-northeast-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
 	const CLIENT_ID = "userpoolappclientidxxxxxxx";
-	const REGION = USERPOOL_ID.split("_")[0]
+	const REGION = USERPOOL_ID.split("_")[0];
 	const PROVIDER_COGNITO = `cognito-idp.${REGION}.amazonaws.com/${USERPOOL_ID}`;
 
 	// Initially Unauthenticated User
@@ -51,10 +56,10 @@
 		});
 	}
 
-	signIn("username", "mypassword")
+	signIn("username", "password")
 	.then(res => {
 		const s3 = new AWS.S3();
-		const p = {Bucket: "myexamplebucket", Key: "myfile.txt"};
+		const p = {Bucket: "mybucket", Key: "myfile.txt"};
 		s3.getObject(p, (err, data) => {
 			console.debug(err);
 			console.debug(data);
